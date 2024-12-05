@@ -27,9 +27,17 @@ int main() // -------------------- PRINCIPAL
 		scanf("%d",&leitor);
 		if (leitor==1)
 		{	
-			pessoas[n] = lerDados();
-			n++;
-			system("pause");
+			if(n==5){
+				printf ("A pilha esta cheia!\n");
+				system("pause");
+			}else if(n<=4){
+				pessoas[n] = lerDados();
+				n++;
+				system("pause");
+			}else{
+				pessoas[n] = lerDados();
+				system("pause");
+			}
 		}
 		else if(leitor==2)
 		{
@@ -54,7 +62,7 @@ int main() // -------------------- PRINCIPAL
 			printf("Valor Invalido\n");
 			system("pause");
 		}
-	}while(n<5);
+	}while(n<6);
 	
 	/*
 	for(a=0;a<5;a++){
